@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+  <tlib-version>1.0</tlib-version>
+  <jspversion>2.1</jspversion>
+  <short-name>e</short-name>
+  <uri>http://hidefd3s7.dip.jp/enumeration</uri>
+  <info>Enum用タグ</info>
+  <function>
+	<description>
+	  Enum#ordinal() から Enum#name() を取得します。
+	</description>
+	<name>o2n</name>
+	<function-class>jp.co.msysol.sastruts.taglib.EFunctions</function-class>
+	<function-signature>java.lang.String o2n(int, java.lang.String)</function-signature>
+	<example>
+	  ${ e:o2n(0, 'Status')}
+	</example>
+  </function>
+  <function>
+	<description>
+	  Enum#ordinal() から Kubun#getCode() を取得します。
+	</description>
+	<name>o2c</name>
+	<function-class>jp.co.msysol.sastruts.taglib.EFunctions</function-class>
+	<function-signature>java.lang.Object o2c(int, java.lang.String)</function-signature>
+	<example>
+	  ${ e:o2c(0, 'Status')}
+	</example>
+  </function>
+  <function>
+	<description>
+	  Enum#ordinal() から Kubun#getName() を取得します。
+	</description>
+	<name>o2kn</name>
+	<function-class>jp.co.msysol.sastruts.taglib.EFunctions</function-class>
+	<function-signature>java.lang.String o2kn(int, java.lang.String)</function-signature>
+	<example>
+	  ${ e:o2kn(0, 'Status')}
+	</example>
+  </function>
+  <function>
+	<description>
+	  Enum#ordinal() から Kubun#getListName() を取得します。
+	</description>
+	<name>o2ln</name>
+	<function-class>jp.co.msysol.sastruts.taglib.EFunctions</function-class>
+	<function-signature>java.lang.String o2ln(int, java.lang.String)</function-signature>
+	<example>
+	  ${ e:o2ln(0, 'Status')}
+	</example>
+  </function>
+  <function>
+	<description>
+	  Enum#name() から Enum#ordinal() を取得します。
+	</description>
+	<name>n2o</name>
+	<function-class>jp.co.msysol.sastruts.taglib.EFunctions</function-class>
+	<function-signature>int n2o(java.lang.String, java.lang.String)</function-signature>
+	<example>
+	  ${ e:n2o('SAKUSEI', 'Status')}
+	</example>
+  </function>
+  <function>
+	<description>
+	  Enum#name() から Kubun#getCode() を取得します。
+	</description>
+	<name>n2c</name>
+	<function-class>jp.co.msysol.sastruts.taglib.EFunctions</function-class>
+	<function-signature>java.lang.Object n2c(java.lang.String, java.lang.String)</function-signature>
+	<example>
+	  ${ e:n2c('SAKUSEI', 'Status')}
+	</example>
+  </function>
+  <function>
+	<description>
+	  Enum#name() から Kubun#getName() を取得します。
+	</description>
+	<name>n2kn</name>
+	<function-class>jp.co.msysol.sastruts.taglib.EFunctions</function-class>
+	<function-signature>java.lang.String n2kn(java.lang.String, java.lang.String)</function-signature>
+	<example>
+	  ${ e:n2kn('SAKUSEI', 'Status')}
+	</example>
+  </function>
+  <function>
+	<description>
+	  Enum#name() から Kubun#getListName() を取得します。
+	</description>
+	<name>n2ln</name>
+	<function-class>jp.co.msysol.sastruts.taglib.EFunctions</function-class>
+	<function-signature>java.lang.String n2ln(java.lang.String, java.lang.String)</function-signature>
+	<example>
+	  ${ e:n2ln('SAKUSEI', 'Status')}
+	</example>
+  </function>
+  <function>
+	<description>
+	  Kubun#getCode() から Enum#ordinal() を取得します。
+	</description>
+	<name>c2o</name>
+	<function-class>jp.co.msysol.sastruts.taglib.EFunctions</function-class>
+	<function-signature>int c2o(java.lang.Object, java.lang.String)</function-signature>
+	<example>
+	  ${ e:c2o('1', 'Status')}
+	</example>
+  </function>
+  <function>
+	<description>
+	  Kubun#getCode() から Enum#name() を取得します。
+	</description>
+	<name>c2n</name>
+	<function-class>jp.co.msysol.sastruts.taglib.EFunctions</function-class>
+	<function-signature>java.lang.String c2n(java.lang.Object, java.lang.String)</function-signature>
+	<example>
+	  ${ e:c2n('1', 'Status')}
+	</example>
+  </function>
+  <function>
+	<description>
+	  Kubun#getCode() から Kubun#getName() を取得します。
+	</description>
+	<name>c2kn</name>
+	<function-class>jp.co.msysol.sastruts.taglib.EFunctions</function-class>
+	<function-signature>java.lang.String c2kn(java.lang.Object, java.lang.String)</function-signature>
+	<example>
+	  ${ e:c2kn('1', 'Status')}
+	</example>
+  </function>
+  <function>
+	<description>
+	  Kubun#getCode() から Kubun#getListName() を取得します。
+	</description>
+	<name>c2ln</name>
+	<function-class>jp.co.msysol.sastruts.taglib.EFunctions</function-class>
+	<function-signature>java.lang.String c2ln(java.lang.Object, java.lang.String)</function-signature>
+	<example>
+	  ${ e:c2ln('1', 'Status')}
+	</example>
+  </function>
+  <function>
+	<description>
+	  Enum名 から Enum#ordinal() を取得します。
+	</description>
+	<name>ordinal</name>
+	<function-class>jp.co.msysol.sastruts.taglib.EFunctions</function-class>
+	<function-signature>int ordinal(java.lang.String)</function-signature>
+	<example>
+	  ${e:ordinal('Status.SAKUSEI')}
+	</example>
+  </function>
+  <function>
+	<description>
+	  Enum名 から Kubun#getCode() を取得します。
+	</description>
+	<name>code</name>
+	<function-class>jp.co.msysol.sastruts.taglib.EFunctions</function-class>
+	<function-signature>java.lang.Object code(java.lang.String)</function-signature>
+	<example>
+	  ${e:code('Status.SAKUSEI')}
+	</example>
+  </function>
+  <function>
+	<description>
+	  Enum名 から Kubun#getName() を取得します。
+	</description>
+	<name>kbnName</name>
+	<function-class>jp.co.msysol.sastruts.taglib.EFunctions</function-class>
+	<function-signature>java.lang.String kbnName(java.lang.String)</function-signature>
+	<example>
+	  ${e:kbnName('Status.SAKUSEI')}
+	</example>
+  </function>
+  <function>
+	<description>
+	  Enum名 から Kubun#getListName() を取得します。
+	</description>
+	<name>listName</name>
+	<function-class>jp.co.msysol.sastruts.taglib.EFunctions</function-class>
+	<function-signature>java.lang.String listName(java.lang.String)</function-signature>
+	<example>
+	  ${e:listName('Status.SAKUSEI')}
+	</example>
+  </function>
+</taglib>
