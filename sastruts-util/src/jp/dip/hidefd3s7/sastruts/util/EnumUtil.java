@@ -30,6 +30,12 @@ public class EnumUtil {
 		return e != null ? e.getListName() : null;
 	}
 
+	/**
+	 * {@link Enum#ordinal()} から {@link Enum} を取得します。
+	 * @param ordinal {@link Enum#ordinal()}
+	 * @param cls 区分クラス
+	 * @return 区分オブジェクトを返します。
+	 */
 	private static <C, E extends Enum<E> & Kubun<C>> E getEnumByOrdinal(int ordinal, Class<E> cls) {
 		for (E e : EnumSet.allOf(cls)) {
 			if (e.ordinal() == ordinal) {
@@ -60,6 +66,12 @@ public class EnumUtil {
 		return e != null ? e.getListName() : null;
 	}
 
+	/**
+	 * {@link Enum#name()} から {@link Enum} を取得します。
+	 * @param name {@link Enum#name()}
+	 * @param cls 区分クラス
+	 * @return 区分オブジェクトを返します。
+	 */
 	private static <C, E extends Enum<E> & Kubun<C>> E getEnumByName(String name, Class<E> cls) {
 		for (E e : EnumSet.allOf(cls)) {
 			if (e.name().equals(name)) {
