@@ -18,6 +18,15 @@ public class EFunctions {
 		PREFIX = Kubun.class.getPackage().getName() + ".";
 	}
 	
+	/**
+	 * パッケージの接頭辞を設定します。
+	 * @param cls Enumや区分パッケージを格納するクラス
+	 */
+	public static void setPrefix(Class<?> cls) {
+		synchronized(PREFIX) {
+			PREFIX = cls.getPackage().getName() + ".";
+		}
+	}
 	
 
 	/**
