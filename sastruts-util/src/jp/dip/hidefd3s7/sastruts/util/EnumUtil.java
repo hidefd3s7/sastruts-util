@@ -4,7 +4,7 @@ import java.util.EnumSet;
 import jp.dip.hidefd3s7.sastruts.enumeration.Kubun;
 
 /**
- * 
+ * 区分値・列挙型を扱うユーティリティクラスです。
  * @author hidefd3s7
  */
 public class EnumUtil {
@@ -90,6 +90,12 @@ public class EnumUtil {
 		return e != null ? e.getName() : null;
 	}
 
+	/**
+	 * {@link Kubun#getCode()} から {@link Enum} を取得します。
+	 * @param code 区分値
+	 * @param cls 区分クラス
+	 * @return 区分オブジェクトを返します。
+	 */
 	private static <C, E extends Enum<E> & Kubun<C>> E getEnumByCode(C code, Class<E> cls) {
 		for (E e : EnumSet.allOf(cls)) {
 			if (e.getCode().equals(code)) {
