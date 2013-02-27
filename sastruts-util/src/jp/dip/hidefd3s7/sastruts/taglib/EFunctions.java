@@ -2,7 +2,18 @@ package jp.dip.hidefd3s7.sastruts.taglib;
 
 import jp.dip.hidefd3s7.sastruts.enumeration.Kubun;
 
-import static jp.dip.hidefd3s7.sastruts.util.EnumUtil.*;
+import static jp.dip.hidefd3s7.sastruts.util.EnumUtil.codeByName;
+import static jp.dip.hidefd3s7.sastruts.util.EnumUtil.codeByOrdinal;
+import static jp.dip.hidefd3s7.sastruts.util.EnumUtil.kbnNameByCode;
+import static jp.dip.hidefd3s7.sastruts.util.EnumUtil.kbnNameByName;
+import static jp.dip.hidefd3s7.sastruts.util.EnumUtil.kbnNameByOrdinal;
+import static jp.dip.hidefd3s7.sastruts.util.EnumUtil.listNameByName;
+import static jp.dip.hidefd3s7.sastruts.util.EnumUtil.listNameByOrdinal;
+import static jp.dip.hidefd3s7.sastruts.util.EnumUtil.listNameByCode;
+import static jp.dip.hidefd3s7.sastruts.util.EnumUtil.nameByCode;
+import static jp.dip.hidefd3s7.sastruts.util.EnumUtil.nameByOrdinal;
+import static jp.dip.hidefd3s7.sastruts.util.EnumUtil.ordinalByCode;
+import static jp.dip.hidefd3s7.sastruts.util.EnumUtil.ordinalByName;
 
 /**
  * 区分のファンクションです。
@@ -12,10 +23,10 @@ import static jp.dip.hidefd3s7.sastruts.util.EnumUtil.*;
 public class EFunctions {
 
 	/** 列挙型で配置される */
-	public static String PREFIX;
+	public static String prefix;
 
 	static {
-		PREFIX = Kubun.class.getPackage().getName() + ".";
+		prefix = Kubun.class.getPackage().getName() + ".";
 	}
 	
 	/**
@@ -23,8 +34,8 @@ public class EFunctions {
 	 * @param cls Enumや区分パッケージを格納するクラス
 	 */
 	public static void setPrefix(Class<?> cls) {
-		synchronized(PREFIX) {
-			PREFIX = cls.getPackage().getName() + ".";
+		synchronized (EFunctions.class) {
+			prefix = cls.getPackage().getName() + ".";
 		}
 	}
 	
@@ -128,7 +139,7 @@ public class EFunctions {
 	/**
 	 * {@link Kubun#getCode()} から {@link Enum#ordinal() } を取得します。
 	 *
-	 * @param name {@link Kubun#getCode()}
+	 * @param code {@link Kubun#getCode()}
 	 * @param cls  クラス名
 	 * @return {@link Enum#ordinal()}
 	 */
@@ -140,7 +151,7 @@ public class EFunctions {
 	/**
 	 * {@link Kubun#getCode()} から {@link Enum#name() } を取得します。
 	 *
-	 * @param name {@link Kubun#getCode()}
+	 * @param code {@link Kubun#getCode()}
 	 * @param cls  クラス名
 	 * @return {@link Enum#name()}
 	 */
@@ -152,7 +163,7 @@ public class EFunctions {
 	/**
 	 * {@link Kubun#getCode()} から {@link Kubun#getName() } を取得します。
 	 *
-	 * @param name {@link Kubun#getCode()}
+	 * @param code {@link Kubun#getCode()}
 	 * @param cls  クラス名
 	 * @return {@link Kubun#getName()}
 	 */
@@ -164,7 +175,7 @@ public class EFunctions {
 	/**
 	 * {@link Kubun#getCode()} から {@link Kubun#getListName() } を取得します。
 	 *
-	 * @param name {@link Kubun#getCode()}
+	 * @param code {@link Kubun#getCode()}
 	 * @param cls  クラス名
 	 * @return {@link Kubun#getListName()}
 	 */
@@ -195,7 +206,7 @@ public class EFunctions {
 	 * @return クラスのフルパス
 	 */
 	private static String getClassName(String cls) {
-		return startsWithSmallCharactor(cls) ? cls : PREFIX + cls;
+		return startsWithSmallCharactor(cls) ? cls : prefix + cls;
 	}
 
 	/**

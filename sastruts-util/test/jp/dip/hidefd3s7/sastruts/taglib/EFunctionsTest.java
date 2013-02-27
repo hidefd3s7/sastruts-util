@@ -36,83 +36,141 @@ public class EFunctionsTest {
 	public void tearDownMethod() throws Exception {
 	}
 
+	/**
+	 * ordinalメソッドのテスト、クラスEFunctionsのテスト。
+	 */
 	@Test
-	public void ordinalOK() {
+	public void testPrefix() {
+		assertEquals("jp.dip.hidefd3s7.sastruts.enumeration.", EFunctions.prefix);
+		EFunctions.setPrefix(EFunctions.class);
+		assertEquals("jp.dip.hidefd3s7.sastruts.taglib.", EFunctions.prefix);
+	}
+
+	/**
+	 * ordinalメソッドのテスト、クラスEFunctionsのテスト。
+	 */
+	@Test
+	public void testOrdinal() {
 		assertEquals(Status.SAKUSEI.ordinal(), ordinal("Status.SAKUSEI"));
 	}
 
+	/**
+	 * codeメソッドのテスト、クラスEFunctionsのテスト。
+	 */
 	@Test
-	public void codeOK() {
+	public void testCode() {
 		assertEquals(Status.SAKUSEI.getCode(), code("Status.SAKUSEI"));
 	}
 
+	/**
+	 * kbnNameメソッドのテスト、クラスEFunctionsのテスト。
+	 */
 	@Test
-	public void kbnNameOK() {
+	public void testKbnName() {
 		assertEquals(Status.SAKUSEI.getName(), kbnName("Status.SAKUSEI"));
 	}
 
+	/**
+	 * listNameメソッドのテスト、クラスEFunctionsのテスト。
+	 */
 	@Test
-	public void listNameOK() {
+	public void testListName() {
 		assertEquals(Status.SAKUSEI.getListName(), listName("Status.SAKUSEI"));
 	}
 
+	/**
+	 * o2n メソッドのテスト、クラスEFunctionsのテスト。
+	 */
 	@Test
-	public void o2nOK() {
+	public void testO2n() {
 		assertEquals(Status.SAKUSEI.name(), o2n(0, "Status"));
 	}
 
+	/**
+	 * o2c メソッドのテスト、クラスEFunctionsのテスト。
+	 */
 	@Test
-	public void o2cOK() {
+	public void testO2c() {
 		assertEquals(Status.SAKUSEI.getCode(), o2c(0, "Status"));
 	}
 
+	/**
+	 * o2kn メソッドのテスト、クラスEFunctionsのテスト。
+	 */
 	@Test
-	public void o2knOK() {
+	public void testO2kn() {
 		assertEquals(Status.SAKUSEI.getName(), o2kn(0, "Status"));
 	}
 
+	/**
+	 * o2ln メソッドのテスト、クラスEFunctionsのテスト。
+	 */
 	@Test
-	public void o2lnOK() {
+	public void testO2ln() {
 		assertEquals(Status.SAKUSEI.getListName(), o2ln(0, "Status"));
 	}
 
+	/**
+	 * c2o メソッドのテスト、クラスEFunctionsのテスト。
+	 */
 	@Test
-	public void c2oOK() {
+	public void testC2o() {
 		assertEquals(Status.SAKUSEI.ordinal(), c2o("1", "Status"));
 	}
 
+	/**
+	 * c2n メソッドのテスト、クラスEFunctionsのテスト。
+	 */
 	@Test
-	public void c2nOK() {
+	public void testC2n() {
 		assertEquals(Status.SAKUSEI.name(), c2n("1", "Status"));
 	}
 
+	/**
+	 * c2kn メソッドのテスト、クラスEFunctionsのテスト。
+	 */
 	@Test
-	public void c2knOK() {
+	public void testC2kn() {
 		assertEquals(Status.SAKUSEI.getName(), c2kn("1", "Status"));
 	}
 
+	/**
+	 * c2ln メソッドのテスト、クラスEFunctionsのテスト。
+	 */
 	@Test
-	public void c2lnOK() {
+	public void testC2ln() {
 		assertEquals(Status.SAKUSEI.getListName(), c2ln("1", "Status"));
 	}
 
+	/**
+	 * n2o メソッドのテスト、クラスEFunctionsのテスト。
+	 */
 	@Test
-	public void n2oOK() {
+	public void testN2o() {
 		assertEquals(Status.SAKUSEI.ordinal(), n2o("SAKUSEI", "Status"));
 	}
 
+	/**
+	 * n2c メソッドのテスト、クラスEFunctionsのテスト。
+	 */
 	@Test
-	public void n2cOK() {
+	public void testN2c() {
 		assertEquals(Status.SAKUSEI.getCode(), n2c("SAKUSEI", "Status"));
 	}
 
+	/**
+	 * n2kn メソッドのテスト、クラスEFunctionsのテスト。
+	 */
 	@Test
-	public void n2knOK() {
+	public void testN2kn() {
 		assertEquals(Status.SAKUSEI.getName(), n2kn("SAKUSEI", "Status"));
 	}
 
+	/**
+	 * n2ln メソッドのテスト、クラスEFunctionsのテスト。
+	 */
 	@Test
-	public void n2lnOK() {
+	public void testN2ln() {
 		assertEquals(Status.SAKUSEI.getListName(), n2ln("SAKUSEI", "Status"));
 	}
 }
